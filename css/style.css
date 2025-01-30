@@ -184,12 +184,44 @@ body {
 #footer {
     display: flex;
     justify-content: center;
+    width: 100%;
     padding: 10px;
     margin-top: auto;
     bottom: 0;
     background-color: #2C3E50;
     color: white;
  }
+
+#design-principles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+#bad-website {
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    background-color: white;
+    margin: 5%;
+    border-radius: 20px;
+}
+
+#good-website {
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    background-color: white;
+    margin: 5%;
+    border-radius: 20px;
+}
+
+.design-prinicple-title {
+    text-align: center;
+    color: #4e5d94;
+}
 
 @keyframes header_animation {
     0% {width: 0;
