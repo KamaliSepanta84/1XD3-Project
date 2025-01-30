@@ -209,6 +209,16 @@ body {
     border-radius: 20px;
 }
 
+#bad-website a {
+    margin-left: 43%;
+    color: white;
+    text-decoration: none;
+    background-color: #4e5d94;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
 #good-website {
     width: 80%;
     height: auto;
@@ -218,6 +228,15 @@ body {
     border-radius: 20px;
 }
 
+#good-website a {
+    margin-left: 43%;
+    color: white;
+    text-decoration: none;
+    background-color: #4e5d94;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+}
 .design-prinicple-title {
     text-align: center;
     color: #4e5d94;
