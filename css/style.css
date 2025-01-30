@@ -250,6 +250,32 @@ body {
     color: #4e5d94;
 }
 
+.showcase-entry {
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+    width: 80%;
+    background-color: white;
+    align-items: center;
+    margin: 5% auto;
+    border-radius: 20px;
+}
+
+.showcase-entry > a {
+    text-decoration: none;
+    color: white;
+    background-color: #4e5d95;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.showcase-entry > a:hover {
+    color: black;
+    background-color: lightgoldenrodyellow;
+}
 @keyframes header_animation {
     0% {width: 0;
         left: 0}
