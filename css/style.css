@@ -15,6 +15,7 @@ body {
     text-align: center;
     justify-content: space-between;
     padding: 10px 20px;
+    width: 100%;
 }
 
 #header_name {
@@ -22,6 +23,7 @@ body {
     margin-right: 20%;
     margin-top: 3%;
     transition: all 0.3s ease;
+    width: 80%;
 }
 
 #header_name:hover {
@@ -46,6 +48,12 @@ body {
         animation-duration: 1.0s;
         animation-delay: 0.5s;
 }
+#headerLeft{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+}
 
 #header_logo {
     width: 100px;
@@ -56,15 +64,20 @@ body {
 #nav {
     display: flex;
     padding: 20px;
-    margin: 10px;
-    gap: 20px;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
 }
 .navlink {
+    width: 30%;
     background-color: #4e5d94; 
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
     transition: all 0.3s ease;
 }
 
@@ -72,13 +85,6 @@ body {
     background-color: lightgoldenrodyellow;
 }
 
-.navlink
-{
-    text-decoration: none;
-    color: white;
-    margin: 20px;
-    transition: all 0.3s ease;
-}
 
 .navlink:hover {
     color: black;
@@ -90,6 +96,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #container h4 {
@@ -117,6 +124,54 @@ body {
     transform: translateY(-10px);
     box-shadow: 5px 5px 10px #1a1a1a, -3px -3px 6px #4a4a4a;
 }
+#footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+    bottom: 0;
+    background-color: #2C3E50;
+    color: white;
+ }
+
+ @media (min-width: 680px) and (max-width: 1024px) {
+    #header_logo{
+        display: none;
+    }
+    #header_name{
+        width: 100%;
+    }
+
+    #nav{
+        margin-right: 20px;
+    }
+    #header{
+        justify-content: center;
+    }
+ }
+ 
+
+ @media (max-width: 680px) {
+    #headerLeft{
+        display: none;
+    }
+
+    #nav{
+        margin-right: 20px;
+    }
+    #header{
+        justify-content: center;
+    }
+ }
+
+
+/* ABOUT PAGE */
+
+
+
+
+
 
 #about_container {
     display: flex;
@@ -189,16 +244,6 @@ body {
     background-color: chocolate;
 }
 
-#footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    margin-top: auto;
-    bottom: 0;
-    background-color: #2C3E50;
-    color: white;
- }
 
 #design-principles-container {
     display: flex;
