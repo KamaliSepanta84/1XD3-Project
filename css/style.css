@@ -169,6 +169,9 @@ body {
 #good-website a {
   margin-top: 15px;
 }
+.individualPics{
+    display: none;
+}
 }
 
 /* ABOUT PAGE */
