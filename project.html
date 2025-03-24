@@ -1,34 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div id = "header">
-        <div id = "headerLeft">
-            <img id = "header_logo" src="images/crest2.png">
-            <h1 id="header_name"><span>404 Job Not Found</span></h1>
-        </div>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div id="headerLeft">
+        <img id="header_logo" src="images/crest2.png" />
+        <h1 id="header_name"><span>404 Job Not Found</span></h1>
+      </div>
 
-         <div id="nav"> 
-            <a class = "navlink" href = "index.html">Home</a>
-            <a class = "navlink" href="showcase.html">Showcase</a>
-            <a class = "navlink" href="about.html">About</a>
-         </div>
+      <div id="nav">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="showcase.html">Showcase</a>
+        <a class="navlink" href="about.html">About</a>
+      </div>
     </div>
-    <div id="projects_container">
+    <!--
+        <div id="projects_container">
         <h1>Initial Client Report Lab 4.2</h1>
         <iframe src="1XD3 Client Project (1).pdf"></iframe>
     </div>
-</body>
+    -->
+    <div id="projects_container">
+      <div class="development-plan">
+        <h2>404 Job Not Found - Development Plan</h2>
 
-<footer id="footer" >
-    <div id="copy_right" >
-        &copy; 404 Job Not Found, McMaster University, 2025
+        <h3>1. Team/Client/App</h3>
+        <p><strong>Team Name:</strong> 404 Job Not Found</p>
+        <p>
+          <strong>Team Members:</strong> Alhan Walli, Aryan Minhas, Marko
+          Kosoric, Sepantha Kamali, Umer Qureshi
+        </p>
+        <p><strong>Client:</strong> Dr. Vincent Maccio</p>
+        <p><strong>App:</strong> MacHub</p>
+
+        <h3>2. Purpose</h3>
+        <p>
+          Our app, MacHub, is designed to help McMaster University students
+          collaborate, share, and access high-quality class notes in an
+          organized and rewarding way. By allowing students to securely upload
+          their notes, categorized by course and topic. The app creates a hub of
+          academic resources accessible to both peers and professors. To
+          encourage academic collaboration and support, users can rate notes,
+          leave feedback, and the highest-rated contributions will be recognized
+          with rewards such as bonus marks or other incentives.
+        </p>
+
+        <h3>3. Data Description</h3>
+        <ul>
+          <li>
+            <strong>User Data:</strong>
+            <ul>
+              <li>Each user is uniquely identified by their mac_id.</li>
+              <li>
+                Users have attributes like name, email, and password (hashed for
+                security).
+              </li>
+              <li>
+                A role field differentiates users as students, teaching
+                assistants (TAs), or instructors.
+              </li>
+              <li>The date_joined field records when the user registered.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Course Data:</strong>
+            <ul>
+              <li>Each course is uniquely identified by a course_code.</li>
+              <li>
+                Courses have associated names, instructors, and semester
+                details.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Notes Data:</strong>
+            <ul>
+              <li>
+                Notes are uniquely identified by an auto-incrementing note_id.
+              </li>
+              <li>
+                Each note is uploaded by a user (linked via mac_id) and belongs
+                to a specific course (course_code).
+              </li>
+              <li>The title, description, and file_url store note details.</li>
+              <li>A timestamp records when the note was uploaded.</li>
+              <li>
+                Notes can be public or private, managed through the visibility
+                field.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Ratings and Reviews Data:</strong>
+            <ul>
+              <li>
+                Ratings are uniquely identified by an auto-incrementing
+                rating_id.
+              </li>
+              <li>
+                Each rating is linked to a specific note (note_id) and given by
+                a user (mac_id).
+              </li>
+              <li>
+                Users can rate notes on a scale of 1 to 5 and leave comments.
+              </li>
+              <li>A timestamp records when the rating was submitted.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Data Relationships:</strong>
+            <ul>
+              <li>Users upload notes, which are tied to specific courses.</li>
+              <li>Other users can rate and review these notes.</li>
+              <li>
+                Deleting a user or course cascades the deletion of related notes
+                and ratings, maintaining database integrity.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>4. Functionality</h3>
+        <ul>
+          <li>
+            <strong>User Registration/Login:</strong>
+            <ul>
+              <li>SELECT (to verify credentials during login)</li>
+              <li>INSERT (to register a new user)</li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Form validation (e.g., email format, password strength)</li>
+              <li>Password hashing</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Upload Notes:</strong>
+            <ul>
+              <li>INSERT into Notes table</li>
+              <li>File uploaded to storage</li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>
+                File upload form with course selection dropdown Progress bar for
+                upload status
+              </li>
+              <li>Client-side file size/type validation</li>
+            </ul>
+          </li>
+          <li>
+            <strong>View Notes by Course or Rating:</strong>
+            <ul>
+              <li>SELECT from Notes table</li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Note listing with search, filter, and sort functionality</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Download:</strong>
+            <ul>
+              <li>SELECT note from Notes table</li>
+              <li>UPDATE download_count in Notes table</li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Button to view PDF in-browser or trigger download</li>
+              <li>Update view/download count dynamically</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Rate Notes:</strong>
+            <ul>
+              <li>INSERT into Ratings table</li>
+              <li>
+                UPDATE average rating in Notes table (recalculated after each
+                rating)
+              </li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Star rating input</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Edit and Delete Your Own Uploaded Notes:</strong>
+            <ul>
+              <li>UPDATE Notes table (for edits to title/description)</li>
+              <li>
+                DELETE from Notes table (and optionally delete file from
+                storage)
+              </li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Edit/delete buttons shown only for user’s own notes</li>
+            </ul>
+          </li>
+          <li>
+            <strong>View Top Notes:</strong>
+            <ul>
+              <li>
+                SELECT top-rated notes/users from Notes and Ratings tables
+              </li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>
+                Leaderboard UI with ranking, filters by course or time period
+              </li>
+              <li>Badge/award icons for top users</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Search For Notes:</strong>
+            <ul>
+              <li>
+                SELECT from Notes table using keyword search (e.g., course code,
+                title, description)
+              </li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Search bar</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Receive Rewards (Admins Only Approve):</strong>
+            <ul>
+              <li>INSERT into Rewards table (by admin)</li>
+            </ul>
+            <strong>Client Side:</strong>
+            <ul>
+              <li>Admin dashboard to approve/reject reward requests</li>
+              <li>User profile shows earned rewards and statuses</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>5. Role of PHP and JavaScript</h3>
+        <p>
+          In our app, PHP will be used primarily for server-side operations such
+          as handling user registration and login, processing file uploads,
+          managing database interactions (including inserting, updating, and
+          deleting notes, ratings, and rewards). PHP will also serve as the
+          backend for endpoints that JavaScript will communicate with.
+          JavaScript, on the other hand, will be used for client-side
+          functionality, including form validation, dynamic display of notes,
+          search and sort features, real-time interactions such as rating notes,
+          displaying leaderboards, and showing upload progress. JavaScript will
+          use AJAX to send data to the PHP backend and update the page without
+          requiring reloads. Together, PHP and JavaScript will work to create a
+          smooth user experience with JavaScript capturing user actions and PHP
+          securely processing them.
+        </p>
+
+        <h3>6. Roles of Team Members</h3>
+        <div class="team-roles">
+          <div class="team-member">
+            <h3>Sepanta – Database & User Authentication</h3>
+            <h4>Database Setup (SQL, PHP)</h4>
+            <ul>
+              <li>
+                Create MySQL tables: Users, Uploaded Files, Categories, Download
+                History.
+              </li>
+              <li>
+                Write optimized queries for inserting, retrieving, and updating
+                data.
+              </li>
+            </ul>
+            <h4>User Authentication (PHP, JavaScript)</h4>
+            <ul>
+              <li>
+                Implement login/logout/registration with hashed passwords.
+              </li>
+              <li>Use PHP sessions for authentication.</li>
+              <li>
+                Add JavaScript form validation (check empty fields, email
+                format).
+              </li>
+            </ul>
+            <h4>Role-Based Access Control (PHP)</h4>
+            <ul>
+              <li>Students can upload/download resources.</li>
+              <li>Admins can delete inappropriate content.</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> PHP, SQL (MySQL), JavaScript</p>
+          </div>
+
+          <div class="team-member">
+            <h3>Umer – File Upload & Search System</h3>
+            <h4>File Upload System (PHP, SQL, JavaScript)</h4>
+            <ul>
+              <li>Create file upload logic with size/type validation (PHP).</li>
+              <li>Store files securely and link them to the database.</li>
+              <li>Use JavaScript for file previews before submission.</li>
+            </ul>
+            <h4>Search & Filtering System (SQL, PHP, JavaScript)</h4>
+            <ul>
+              <li>Implement search bar (SQL LIKE queries).</li>
+              <li>
+                Allow filtering by subject, course, popularity, upload date (PHP
+                + JavaScript).
+              </li>
+            </ul>
+            <h4>Download Tracking (SQL, PHP)</h4>
+            <ul>
+              <li>Record file downloads in the database.</li>
+            </ul>
+            <p>
+              <strong>Tech Stack:</strong> PHP, SQL (MySQL), JavaScript (AJAX
+              for live search)
+            </p>
+          </div>
+
+          <div class="team-member">
+            <h3>Alhan – Frontend UI & Form Handling</h3>
+            <h4>UI Design (HTML, CSS, JavaScript)</h4>
+            <ul>
+              <li>Create homepage, dashboard, and file browsing pages.</li>
+              <li>Ensure mobile-friendly, responsive design.</li>
+            </ul>
+            <h4>Navigation & User Experience (JavaScript)</h4>
+            <ul>
+              <li>Implement a dynamic sidebar/navbar.</li>
+              <li>Add real-time notifications (e.g., “Upload Successful”).</li>
+            </ul>
+            <h4>Frontend Form Handling (JavaScript, PHP)</h4>
+            <ul>
+              <li>Validate registration & login forms before submitting.</li>
+              <li>Validate file uploads (JavaScript before PHP processing).</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP</p>
+          </div>
+
+          <div class="team-member">
+            <h3>Aryan – JavaScript Interactivity & AJAX</h3>
+            <h4>Dynamic Search & Filtering (JavaScript, AJAX, SQL)</h4>
+            <ul>
+              <li>
+                Implement live search & filtering (fetch results without page
+                reload).
+              </li>
+              <li>Optimize SQL queries for fast response times.</li>
+            </ul>
+            <h4>AJAX-Powered File Uploads & Downloads (JavaScript, PHP)</h4>
+            <ul>
+              <li>Implement asynchronous file uploads (show progress bar).</li>
+              <li>Handle file downloads dynamically with PHP.</li>
+            </ul>
+            <h4>Application Security (PHP, SQL)</h4>
+            <ul>
+              <li>Prevent SQL injection (use prepared statements).</li>
+              <li>Sanitize user inputs in search queries.</li>
+            </ul>
+            <p>
+              <strong>Tech Stack:</strong> JavaScript (AJAX), PHP, SQL (MySQL)
+            </p>
+          </div>
+
+          <div class="team-member">
+            <h3>Marko – Deployment, Testing & Security</h3>
+            <h4>Server Setup & Deployment (PHP, SQL)</h4>
+            <ul>
+              <li>Set up Apache/Nginx with PHP & MySQL.</li>
+              <li>Deploy the website on cPanel, DigitalOcean, or AWS.</li>
+            </ul>
+            <h4>Testing & Debugging (JavaScript, PHP, SQL)</h4>
+            <ul>
+              <li>Test all features (file upload, authentication, search).</li>
+              <li>Debug JavaScript & PHP errors.</li>
+            </ul>
+            <h4>Security Enhancements (PHP, SQL)</h4>
+            <ul>
+              <li>Implement error handling & logging (PHP).</li>
+              <li>Secure file uploads (validate file extensions).</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> PHP, SQL (MySQL), JavaScript</p>
+          </div>
+        </div>
+
+        <h3>7. Incremental Delivery</h3>
+        <p>
+          The first increment of our app will focus on developing the frontend
+          interface for uploading notes. This will include creating a clean and
+          user-friendly upload page with a form that allows users to select a
+          course from a dropdown menu, enter a title and description for their
+          notes, and upload a file in PDF or DOCX format. Client-side validation
+          will be implemented to ensure all fields are filled correctly and that
+          only valid file types and sizes are accepted. A version of the login
+          system may also be implemented, utilizing a mac ID and emails.
+        </p>
+
+        <h3>8. Client Feedback (From Dr. Maccio)</h3>
+        <ul>
+          <li>Professors should approve rewards for top notes.</li>
+          <li>Secure verification system for student IDs is necessary.</li>
+          <li>The platform should be mobile-friendly.</li>
+          <li>Students should have a way to report inappropriate content.</li>
+        </ul>
+      </div>
     </div>
-</footer>
+  </body>
 
+  <footer id="footer">
+    <div id="copy_right">
+      &copy; 404 Job Not Found, McMaster University, 2025
+    </div>
+  </footer>
 </html>
