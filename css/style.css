@@ -204,21 +204,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-iframe {
-  width: 80%;
-  height: 610px;
-}
-#projects_container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#projects_container > h1 {
-  color: #4e5d95;
-  width: 100%;
-  text-align: center;
-}
+
 
 #about_container > div:hover {
   transform: scale(1.02);
@@ -326,6 +312,107 @@ iframe {
   color: black;
   background-color: lightgoldenrodyellow;
 }
+
+#project-plan-container{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 20px auto;
+}
+
+#project-plan-header{
+  text-align: center;
+}
+
+#project-overview{
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title{
+  text-align: center;
+}
+
+#team-and-purpose{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#team-and-client{
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#purpose-of-project{
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#team-roles{
+  display: flex;
+  flex-direction: column;
+}
+
+#team-meber-role-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#last-two-members{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#sepanta, #umer, #alhan, #aryan, #marko{
+  width: 30%;
+}
+.dev-plan-section{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#data-description-title{
+  text-align: center;
+}
+
+.dev-plan-section-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#user-data, #course-data, #notes-data
+, #rel-data, #rating-data{
+  width: 30%;
+}
+
+#functionality-title{
+  text-align: center;
+}
+
+#user-login, #update-notes, #view-by-rating, #rate-notes, #search-notes{
+  width: 30%;
+}
+
+#incremental-title{
+  text-align: center;
+}
+
+#client-feedback-title{
+  text-align: center;
+}
+
 @keyframes header_animation {
   0% {
     width: 0;

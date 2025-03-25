@@ -26,15 +26,18 @@
     </div>
     -->
     <div id="project-plan-container">
-        <h1>404 Job Not Found - Development Plan</h1>
+        <div id="project-plan-header">
+          <h1>404 Job Not Found - Development Plan</h1>
+        </div>
         <div id="project-overview">
-           <div>
+           <div class="section-title">
               <h2>Project Overview</h2>
            </div>
            <div class="dev-plan-section-container">
-              <div class="dev-plan-section">
+            <span id="team-and-purpose">
+              <div id = "team-and-client" class="dev-plan-section">
                 <div class="dev-plan-section-title">
-                  <h3>Team and Client Information</h3>
+                  <h3>Team & Client</h3>
                 </div>
                   <hr>
                   <ul>
@@ -51,13 +54,13 @@
                   </ul>
               </div>
 
-              <div class="dev-plan-section">
+              <div id = "purpose-of-project" class="dev-plan-section">
                 <div class="dev-plan-section-title">
                   <h3>Pupose of Project</h3>
                 </div>
                 <hr>
                 <p>
-                  Our app, MacHub, is designed to help McMaster University students
+                  Our app, MacNotes, is designed to help McMaster University students
                   collaborate, share, and access high-quality class notes in an
                   organized and rewarding way. By allowing students to securely upload
                   their notes, categorized by course and topic. The app creates a hub of
@@ -67,57 +70,76 @@
                   with rewards such as bonus marks or other incentives.
                 </p>
               </div>
+            </span>
+           </div>
 
-              <div class="dev-plan-section">
-                <div class="dev-plan-section-title">
-                  <h3>Team Roles</h3>
+           <div id = "team-roles" class="dev-plan-section-container">
+              <div class="section-title">
+                <h2>Team Roles</h2>
+              </div>
+              
+              <div id="team-meber-role-container">
+                <div id = "sepanta" class="dev-plan-section">
+                  <h3>Sepanta Kamali</h3>
+                  <hr>
+                  <ul>
+                    <li>Database Management for Users, File Uploads/Downloads(SQL & PHP)</li>
+                    <li>Login Page/User Authentication(PHP & JavaScript)</li>
+                    <li>Password Encryption & Database Security(PHP & JavaScript)</li>
+                    <li>Rating and Reviewing System</li>
+                  </ul>
                 </div>
-                <hr>
-
-                <h3>Sepanta Kamali</h3>
-                <ul>
-                  <li>Database Management for Users, File Uploads & Downloads(SQL & PHP)</li>
-                  <li>Login Page & User Authentication(PHP & JavaScript)</li>
-                  <li>Password Encryption & Database Security(PHP & JavaScript)</li>
-                  <li>Rating and Reviewing System</li>
-                </ul>
-
-                <h3>Umer Qureshi</h3>
-                <ul>
-                  <li>File Upload & Download System(PHP, SQL, JavaScript)</li>
-                  <li>Search & Filtering System (SQL, PHP, JavaScript)</li>
-                  <li>High-Rating Notes Suggestion</li>
-                </ul>
-
-                <h3>Alhan Walli</h3>
-                <ul>
-                  <li>Frontend UI & Form Handling(HTML, CSS, JavaScript)</li>
-                  <li>Navigation & User Experience(JavaScript)</li>
-                </ul>
-
-                <h3>Aryan Minhas</h3>
-                <ul>
-                  <li>Dynamic Search & Filtering (JavaScript, AJAX, SQL)</li>
-                  <li>AJAX-Powered File Uploads & Downloads (JavaScript, PHP)</li>
-                </ul>
-
-                <h3>Marko Kosoric</h3>
-                <ul>
-                  <li>Deployment, Testing & Security</li>
-                  <li>Server Setup & Deployment (PHP, SQL)</li>
-                  <li>Debugging & Finding Errors</li>
-                </ul>
+                
+                <div id = "umer" class="dev-plan-section">
+                  <h3>Umer Qureshi</h3>
+                  <hr>
+                  <ul>
+                    <li>File Upload/Download System(PHP, SQL, JavaScript)</li>
+                    <li>Search & Filtering System (SQL, PHP, JavaScript)</li>
+                    <li>High-Rating Notes Suggestion</li>
+                  </ul>
+                </div>
+  
+                <div id = "alhan" class="dev-plan-section">
+                  <h3>Alhan Walli</h3>
+                  <hr>
+                  <ul>
+                    <li>Frontend & Form Handling(HTML, CSS, JavaScript)</li>
+                    <li>Navigation & User Experience(JavaScript)</li>
+                  </ul>
+                </div>
+  
+                <span id="last-two-members">
+                  <div  id = "aryan" class="dev-plan-section">
+                    <h3>Aryan Minhas</h3>
+                    <hr>
+                    <ul>
+                      <li>Dynamic Search & Filtering (JavaScript, AJAX, SQL)</li>
+                      <li>AJAX-Powered File Uploads & Downloads (JavaScript, PHP)</li>
+                    </ul>
+                  </div>
+    
+                  <div id = "marko" class="dev-plan-section">
+                    <h3>Marko Kosoric</h3>
+                    <hr>
+                    <ul>
+                      <li>Deployment, Testing & Security(PHP, JavaScript)</li>
+                      <li>Server Setup & Deployment (PHP, SQL)</li>
+                      <li>Debugging & Finding Errors(PHP, JavaScript, SQL)</li>
+                    </ul>
+                  </div>
+                </span>
               </div>
            </div>
         </div>
 
         <div id="data-description">
-            <div>
+            <div id="data-description-title">
               <h2>Data Description</h2>
             </div>
 
             <div class="dev-plan-section-container">
-                <div class="dev-plan-section">
+                <div id = "user-data" class="dev-plan-section">
                   <h3>User Data:</h3>
                   <hr>
                   <ul>
@@ -134,7 +156,7 @@
                   </ul>
                 </div>
 
-                <div class="dev-plan-section">
+                <div id = "course-data" class="dev-plan-section">
                   <h3>Course Data:</h3>
                   <hr>
                   <ul>
@@ -146,7 +168,7 @@
                   </ul>
                 </div>
 
-                <div class="dev-plan-section">
+                <div id = "notes-data" class="dev-plan-section">
                   <h3>Notes Data:</h3>
                   <hr>
                   <ul>
@@ -166,7 +188,7 @@
                   </ul>
                 </div>
 
-                <div class="dev-plan-section">
+                <div id = "rating-data" class="dev-plan-section">
                   <h3>Ratings & Reviewings Data:</h3>
                   <hr>
                   <ul>
@@ -185,7 +207,7 @@
                   </ul>
                 </div>
 
-                <div class="dev-plan-section">
+                <div id = "rel-data" class="dev-plan-section">
                   <h3>Data Relationships:</h3>
                   <hr>
                   <ul>
@@ -201,12 +223,12 @@
         </div>
 
         <div id="functionality">
-          <div>
+          <div id="functionality-title">
             <h2>Functionality</h2>
           </div>
 
           <div class="dev-plan-section-container">
-            <div class="dev-plan-section">
+            <div id = "user-login" class="dev-plan-section">
               <h3>User Registration/Login:</h3>
               <hr>
               <ul>
@@ -217,7 +239,7 @@
               </ul>
             </div>
 
-            <div class="dev-plan-section">
+            <div id = "update-notes" class="dev-plan-section">
               <h3>Upload Notes:</h3>
               <hr>
               <ul>
@@ -231,8 +253,8 @@
               </ul>
             </div>
 
-            <div class="dev-plan-section">
-              <h3>View Notes by Course or Rating:</h3>
+            <div id = "view-by-rating" class="dev-plan-section">
+              <h3>View by Course/Rating:</h3>
               <hr>
               <ul>
                 <li>SELECT from Notes table</li>
@@ -241,7 +263,7 @@
               </ul>
             </div>
 
-            <div class="dev-plan-section">
+            <div id = "rate-notes" class="dev-plan-section">
               <h3>Rate Notes: </h3>
               <hr>
               <ul>
@@ -254,7 +276,7 @@
               </ul>
             </div>
 
-            <div class="dev-plan-section">
+            <div id = "search-notes" class="dev-plan-section">
               <h3>Search for Notes: </h3>
               <hr>
               <ul>
@@ -266,6 +288,48 @@
               </ul>
             </div>
 
+          </div>
+        </div>
+
+        <div id="incremental">
+          <div id="incremental-title">
+            <h2>Incremental</h2>
+          </div>
+
+          <div class="dev-plan-section-container">
+            <div class="dev-plan-section">
+              <h3>First Increment </h3>
+              <hr>
+              <p>
+                The first increment of our app will focus on developing the frontend
+                interface for uploading notes. This will include creating a clean and
+                user-friendly upload page with a form that allows users to select a
+                course from a dropdown menu, enter a title and description for their
+                notes, and upload a file in PDF or DOCX format. Client-side validation
+                will be implemented to ensure all fields are filled correctly and that
+                only valid file types and sizes are accepted. A version of the login
+                system may also be implemented, utilizing a mac ID and emails.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="client-feedback">
+          <div id="client-feedback-title">
+            <h2>Client Feedback</h2>
+          </div>
+
+          <div class="dev-plan-section-container">
+            <div class="dev-plan-section">
+              <h3>First Feedback</h3>
+              <hr>
+              <ul>
+                <li>Professors should approve rewards for top notes.</li>
+                <li>Secure verification system for student IDs is necessary.</li>
+                <li>The platform should be mobile-friendly.</li>
+                <li>Students should have a way to report inappropriate content.</li>
+              </ul>
+            </div>
           </div>
         </div>
     </div>
